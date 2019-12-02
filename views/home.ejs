@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--Import Google Icon Font-->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <!--Import materialize.css-->
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="../css/materialize.min.css"
+      media="screen,projection"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+      integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
+      crossorigin="anonymous"
+    />
+    <link type="text/css" rel="stylesheet" href="../css/style.css" />
+    
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+
+  <body>
+    <!-- navbar -->
+    <%if(user==undefined){%>
+    <div class="navbar-fixed">
+      <nav class=" white-text">
+        <div class="container">
+          <div class="nav-wrapper">
+            <a href="/" class="brand-logo">Web4All </a>
+            <a href="/" data-target="mobile-nav" class="sidenav-trigger">
+              <i class="material-icons">menu</i></a
+            >
+
+            <ul class="right hide-on-med-and-down" style="color:black">
+              <li>
+                <a href="/">Home</a>
+              </li>
+              <li>
+                <a href="#c">Courses</a>
+              </li>
+              <li>
+                <a href="#courses">Popular Courses</a>
+              </li>
+              <li>
+                <a href="#members">About</a>
+              </li>
+              <li>
+                <a href="#headings">Contact</a>
+              </li>
+              <li>
+                <a class="waves-effect waves-light btn" href="/login">Login</a>
+              </li>
+              <li>
+                <a class="waves-effect waves-light btn" href="/register"
+                  >Signup</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <%}else{%>
+    <div class="navbar-fixed">
+      <nav class=" white-text">
+        <!-- <div class="container"> -->
+        <div class="nav-wrapper" style="padding:0px 10vw">
+          <a href="/" class="brand-logo">Web4All </a>
+          <a href="/" data-target="mobile-nav" class="sidenav-trigger">
+            <i class="material-icons">menu</i></a
+          >
+
+          <ul class="right hide-on-med-and-down" style="color:black">
+            <li>
+              <a href="/">Home</a>
+            </li>
+            <li>
+              <a href="#c">Courses</a>
+            </li>
+            <li>
+              <a href="#courses">Popular Courses</a>
+            </li>
+            <li>
+              <a href="#members">About</a>
+            </li>
+            <li>
+              <a href="#headings">Contact</a>
+            </li>
+            <li>
+              <a class="waves-effect waves-light btn" href="/p"
+                ><%=user.user%></a
+              >
+            </li>
+            <li>
+              <a class="waves-effect waves-light btn" href="/logout">Logout</a>
+            </li>
+          </ul>
+        </div>
+        <!-- </div> -->
+      </nav>
+    </div>
+    <%}%> <%if(user==undefined){%>
+    <ul class="sidenav" id="mobile-nav">
+      <li>
+        <a href="/">Home</a>
+      </li>
+      <li>
+        <a href="#c">Courses</a>
+      </li>
+      <li>
+        <a href="#courses">Popular Courses</a>
+      </li>
+      <li>
+        <a href="#members">About</a>
+      </li>
+      <li>
+        <a href="#headings">Contact</a>
+      </li>
+      <li></li>
+      <li>
+        <a href="/login">Login</a>
+      </li>
+      <li>
+        <a href="/register">Signup</a>
+      </li>
+    </ul>
+    <%}else{%>
+
+    <ul class="sidenav" id="mobile-nav">
+      <li>
+        <a href="/">Home</a>
+      </li>
+      <li>
+        <a href="#c">Courses</a>
+      </li>
+      <li>
+        <a href="#courses">Popular Courses</a>
+      </li>
+      <li>
+        <a href="#members">About</a>
+      </li>
+      <li>
+        <a href="#headings">Contact</a>
+      </li>
+      <li>
+        <a href="/p"><%=user.user%></a>
+      </li>
+      <li>
+        <a href="/logout">Logout</a>
+      </li>
+    </ul>
+    <%}%>
+    <!-- slider -->
+    <div class="slider">
+      <ul class="slides">
+        <li>
+          <img src="../img/image1.jpg" />
+          <!-- random image -->
+          <div class="caption center-align">
+            <h3>This is our big Tagline!</h3>
+            <h5 class="light grey-text text-lighten-3">
+              Here's our small slogan.
+            </h5>
+          </div>
+        </li>
+        <li>
+          <img src="../img/image2.jpg" />
+          <!-- random image -->
+          <div class="caption left-align">
+            <h3>Left Aligned Caption</h3>
+            <h5 class="light grey-text text-lighten-3">
+              Here's our small slogan.
+            </h5>
+          </div>
+        </li>
+        <li>
+          <img src="../img/image3.jpg" />
+          <!-- random image -->
+          <div class="caption right-align">
+            <h3>Right Aligned Caption</h3>
+            <h5 class="light grey-text text-lighten-3">
+              Here's our small slogan.
+            </h5>
+          </div>
+        </li>
+        <li>
+          <img src="../img/image4.jpg" />
+          <!-- random image -->
+          <div class="caption center-align">
+            <h3>This is our big Tagline!</h3>
+            <h5 class="light grey-text text-lighten-3">
+              Here's our small slogan.
+            </h5>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <div id="c" style="text-align: center;">
+      <h5>Course Categories</h5>
+    </div>
+
+    <div id="categories">
+      <div class="row">
+        <div class="col s12 m3">
+          
+            <div class="card">
+              <div class="card-image">
+                <img src="../img/1.png" />
+              </div>
+
+              <div class="card-action">
+                <a href="#">React</a>
+              </div>
+            </div>
+          
+        </div>
+        <div class="col s12 m3">
+          <div class="card">
+            <div class="card-image">
+              <img src="../img/2.png" />
+            </div>
+
+            <div class="card-action">
+              <a href="#">Angular</a>
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m3">
+          <div class="card">
+            <div class="card-image">
+              <img src="../img/3.png" />
+            </div>
+
+            <div class="card-action">
+              <a href="#">HTML</a>
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m3">
+          <div class="card">
+            <div class="card-image">
+              <img src="../img/4.png" />
+            </div>
+
+            <div class="card-action">
+              <a href="#">Bootstrap</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="text-align: center;">
+      <h5>Our Popular Courses</h5>
+    </div>
+
+    <div id="courses">
+      <div class="row">
+        <div class="card col s12 m6 l6 ">
+          <div class="video-container">
+            <!-- <iframe
+              width="853"
+              height="480"
+              src="../img/Nodejs.png"
+              frameborder="0"
+              allowfullscreen
+            ></iframe> -->
+            <img src="../img/nodejs.PNG" />
+          </div>
+          <div class="card-content">
+            <span class="card-title activator grey-text text-darken-4"
+              >Nodejs<i class="material-icons right">more_vert</i></span
+            >
+          </div>
+          <div class="card-reveal">
+            <span class="card-title grey-text text-darken-4"
+              >React Front to Back<i class="material-icons right"
+                >close</i
+              ></span
+            >
+            <p>
+              Here is some more information about this product that is only
+              revealed once clicked on.
+            </p>
+          </div>
+        </div>
+
+        <div class="card col s12 m6 l6">
+          <div class="video-container">
+            <!-- <iframe
+              width="853"
+              height="480"
+              src="//www.youtube.com/embed/UB1O30fR-EE"
+              frameborder="0"
+              allowfullscreen
+            ></iframe> -->
+            <img src="../img/html_css.PNG" />
+          </div>
+          <div class="card-content">
+            <span class="card-title activator grey-text text-darken-4"
+              >HTML and CSS<i class="material-icons right">more_vert</i></span
+            >
+          </div>
+          <div class="card-reveal">
+            <span class="card-title grey-text text-darken-4"
+              >MERN Stack Development<i class="material-icons right"
+                >close</i
+              ></span
+            >
+            <p>
+              Here is some more information about this product that is only
+              revealed once clicked on.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="card col s12 m6 l6 ">
+          <div class="video-container">
+            <!-- <iframe
+              width="853"
+              height="480"
+              src="//www.youtube.com/embed/vZvuXYuW5Zs"
+              frameborder="0"
+              allowfullscreen
+            ></iframe> -->
+            <img src="../img/react.PNG" />
+          </div>
+          <div class="card-content">
+            <span class="card-title activator grey-text text-darken-4"
+              >React <i class="material-icons right">more_vert</i></span
+            >
+          </div>
+          <div class="card-reveal">
+            <span class="card-title grey-text text-darken-4"
+              >React Front to Back<i class="material-icons right"
+                >close</i
+              ></span
+            >
+            <p>
+              Here is some more information about this product that is only
+              revealed once clicked on.
+            </p>
+          </div>
+        </div>
+
+        <div class="card col s12 m6 l6">
+          <div class="video-container">
+            <!-- <iframe
+              width="853"
+              height="480"
+              src="//www.youtube.com/embed/Fdf5aTYRW0E"
+              frameborder="0"
+              allowfullscreen
+            ></iframe> -->
+            <img src="../img/angular.PNG" />
+          </div>
+          <div class="card-content">
+            <span class="card-title activator grey-text text-darken-4"
+              >Angular<i class="material-icons right">more_vert</i></span
+            >
+          </div>
+          <div class="card-reveal">
+            <span class="card-title grey-text text-darken-4"
+              >MERN Stack Development<i class="material-icons right"
+                >close</i
+              ></span
+            >
+            <p>
+              Here is some more information about this product that is only
+              revealed once clicked on.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- teachers -->
+    <!-- <div style="text-align: center;">
+      <h5>Teachers</h5>
+    </div>
+
+    <div class="container" id="teachers">
+      <div class="row">
+        <div class="col s12 m4">
+          <div class="card">
+            <div class="card-image">
+              <img src="../img/react.png" />
+            </div>
+            <div class="card-content">
+              <p>
+                I am a very simple card. I am good at containing small bits of
+                information. I am convenient because I require little markup to
+                use effectively.
+              </p>
+            </div>
+            <div class="card-action">
+              <a href="#">React</a>
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m4">
+          <div class="card">
+            <div class="card-image">
+              <img src="../img/angular.png" />
+            </div>
+            <div class="card-content">
+              <p>
+                I am a very simple card. I am good at containing small bits of
+                information. I am convenient because I require little markup to
+                use effectively.
+              </p>
+            </div>
+            <div class="card-action">
+              <a href="#">Angular</a>
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m4">
+          <div class="card">
+            <div class="card-image">
+              <img src="../img//bootstrap.png" />
+            </div>
+            <div class="card-content">
+              <p>
+                I am a very simple card. I am good at containing small bits of
+                information. I am convenient because I require little markup to
+                use effectively.
+              </p>
+            </div>
+            <div class="card-action">
+              <a href="#">Bootstrap</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+    <!-- footer -->
+    <footer
+      class="section red accent-2 white-text center"
+      style="padding-bottom:0px;margin:0px;font-size:8px"
+      id="headings"
+    >
+      <div class="container" id="conatct">
+        <div style="text-align: center;">
+          <h3 style="margin:0px;font-size:24px">Contact Us</h3>
+        </div>
+
+        <section
+          id="contact"
+          class="section section-contact scrollspy"
+          style="padding:0px;margin:0px;font-size:12px"
+        >
+          <div class="container">
+            <div class="row" style="padding:0px;margin:0px">
+              <div class="col s12 m5">
+                <div
+                  class="card-panel teal white-text center"
+                  style="padding:0px;margin-top:8px"
+                >
+                  <div style="color:#000">
+                    <ul class="collection with-header">
+                      <li class="collection-item" style="padding:2px">
+                        Ph: 8310475078
+                      </li>
+
+                      <li class="collection-item" style="padding:2px">
+                        Mail: info@afire.com
+                      </li>
+                      <li class="collection-item" style="padding:2px">
+                        Web4All, Electronic City, Bangalore Karnataka, India
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col s12 m2"></div>
+              <div class="col s12 m5">
+                <h4 style="font-size:18px;padding-bottom:0px;margin-bottom:0px">
+                  Follow Web4All
+                </h4>
+                <p>Follow us on social media for special offers</p>
+                <a
+                  href="htttps://facebook.com"
+                  target="_blank"
+                  class="white-text"
+                  style="margin-right:15px"
+                >
+                  <i class="fab fa-facebook fa-3x"></i>
+                </a>
+                <a
+                  href="htttps://twitter.com"
+                  target="_blank"
+                  class="white-text"
+                  style="margin-right:15px"
+                >
+                  <i class="fab fa-twitter fa-3x"></i>
+                </a>
+                <a
+                  href="htttps://linkedin.com"
+                  target="_blank"
+                  class="white-text"
+                  style="margin-right:15px"
+                >
+                  <i class="fab fa-linkedin fa-3x"></i>
+                </a>
+                <a
+                  href="htttps://googleplus.com"
+                  target="_blank"
+                  class="white-text"
+                  style="margin-right:15px"
+                >
+                  <i class="fab fa-google-plus fa-3x"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <p class="flow-text" style="margin:0px;font-size:18px">
+        Web4All &copy; 2019
+      </p>
+    </footer>
+
+    <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.js"
+      integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      $(function() {
+        // Smooth Scrolling
+        $('a[href*="#"]:not([href="#"])').click(function() {
+          if (
+            location.pathname.replace(/^\//, "") ==
+              this.pathname.replace(/^\//, "") &&
+            location.hostname == this.hostname
+          ) {
+            var target = $(this.hash);
+            target = target.length
+              ? target
+              : $("[name=" + this.hash.slice(1) + "]");
+            if (target.length) {
+              $("html, body").animate(
+                {
+                  scrollTop: target.offset().top
+                },
+                1000
+              );
+              return false;
+            }
+          }
+        });
+      });
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+    <!--JavaScript at end of body for optimized loading-->
+    <script type="text/javascript" src="../js/materialize.min.js"></script>
+
+    <script type="text/javascript" src="../js/style.js"></script>
+  </body>
+</html>
